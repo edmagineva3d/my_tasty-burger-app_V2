@@ -42,3 +42,5 @@ function Section7() {
 }
 
 export default Section7;
+
+/* keep the footer banner asset unchanged */
