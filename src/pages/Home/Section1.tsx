@@ -37,3 +37,5 @@ function Section1() {
 export default Section1;
 
 /* keep the first hero image in the existing section */
+
+/* keep the second hero image in the existing section */
