@@ -108,3 +108,5 @@ function Section5() {
 export default Section5;
 
 /* keep the brand logos in the shop section unchanged */
+
+/* keep the remaining brand logos unchanged */
