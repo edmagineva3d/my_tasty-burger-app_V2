@@ -21,3 +21,5 @@ function App() {
 }
 
 export default App;
+
+/* keep the remaining project assets together without changing the app */
