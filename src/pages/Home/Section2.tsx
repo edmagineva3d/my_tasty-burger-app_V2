@@ -78,3 +78,4 @@ function Section2() {
 }
 
 export default Section2;
+/* keep the about section image assets unchanged */
