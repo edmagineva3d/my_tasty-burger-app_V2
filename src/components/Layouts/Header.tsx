@@ -62,3 +62,5 @@ function Header() {
 }
 
 export default Header;
+
+/* keep the existing header image setup unchanged */
