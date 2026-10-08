@@ -99,3 +99,4 @@ function Section6() {
 }
 
 export default Section6;
+/* keep the blog review images unchanged */
