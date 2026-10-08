@@ -51,3 +51,4 @@ function Section4() {
 }
 
 export default Section4;
+/* keep the parallax background asset unchanged */
