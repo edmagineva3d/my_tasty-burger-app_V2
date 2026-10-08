@@ -152,3 +152,5 @@ function Section3() {
 }
 
 export default Section3;
+
+/* keep the burger menu image order unchanged */
