@@ -1,0 +1,133 @@
+/* Cart Section Styling */
+.cart_section {
+  padding: 100px 0;
+  background-color: #f8f9fa;
+  min-height: 80vh;
+}
+
+.section_title {
+  font-family: 'Lobster', crossorigin; 
+  color: #242e39;
+  font-size: 40px;
+}
+
+/* Table Styling */
+.cart_table {
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.cart_table thead {
+  background-color: #ffc107; /* Burger Yellow Color */
+  color: #242e39;
+}
+
+.cart_table th, .cart_table td {
+  padding: 20px;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.cart_product {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  text-align: left;
+}
+
+.cart_product img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* Quantity & Buttons */
+.qty_box {
+  border: 1px solid #ddd;
+  padding: 5px 15px;
+  display: inline-block;
+  border-radius: 5px;
+}
+
+.delete_btn {
+  background: none;
+  border: none;
+  color: #dc3545;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/* Summary Card */
+.cart_summary {
+  background: #242e39; /* Dark Theme */
+  color: #fff;
+  padding: 30px;
+  border-radius: 15px;
+}
+
+.summary_item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.summary_item.total {
+  font-size: 22px;
+  font-weight: bold;
+  color: #ffc107;
+}
+
+.order_btn {
+  width: 100%;
+  background-color: #ffc107;
+  color: #242e39;
+  border: none;
+  padding: 12px;
+  border-radius: 30px;
+  font-weight: bold;
+  margin-top: 20px;
+  transition: 0.3s;
+}
+
+.order_btn:hover {
+  background-color: #e5ac00;
+}
+
+.continue_shop {
+  display: block;
+  text-align: center;
+  margin-top: 15px;
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.qty_btn {
+  background: #f8f9fa;
+  border: 1px solid #ddd;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.qty_btn:hover {
+  background: #ffc107;
+  color: white;
+  border-color: #ffc107;
+}
+.empty_cart_icon img {
+  width: 82px;
+  height: 82px;
+  object-fit: cover;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto 12px;
+}
