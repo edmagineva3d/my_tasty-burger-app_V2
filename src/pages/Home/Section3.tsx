@@ -156,3 +156,5 @@ export default Section3;
 /* keep the burger menu image order unchanged */
 
 /* keep the rest of the burger menu images unchanged */
+
+/* keep the last burger menu images unchanged */
