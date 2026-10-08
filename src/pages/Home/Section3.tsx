@@ -158,3 +158,5 @@ export default Section3;
 /* keep the rest of the burger menu images unchanged */
 
 /* keep the last burger menu images unchanged */
+
+/* keep the menu ad images in the same section */
