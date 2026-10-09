@@ -128,6 +128,35 @@
   transition: all 500ms ease-in-out;
 }
 
+.menu_section .menu-card-image{
+  position: relative;
+}
+
+.menu_section .menu-item-badge{
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  max-width: calc(100% - 72px);
+  min-height: 36px;
+  padding: 0 12px;
+  border-radius: 4px;
+  background: var(--yellow);
+  color: var(--light-black);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: .04em;
+  line-height: 1.2;
+  text-transform: uppercase;
+  white-space: normal;
+  overflow-wrap: anywhere;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, .14);
+  pointer-events: none;
+}
+
 .menu_section h2{
   font-size: 3.5rem;
   color: var(--light-red);
@@ -655,3 +684,26 @@ footer .copy_right ul li:last-child::after{
   color: #ffc107;
   margin: 10px 0;
 }
+
+/* Menu search, filters and sorting - matched to the existing Tasty Burger theme */
+.menu_tools_wrap { margin: 0 auto 28px; }
+.menu_tools { background: #fff; border: 1px solid #eadfd4; border-radius: 16px; padding: 16px; box-shadow: 0 8px 22px rgba(0,0,0,.06); }
+.menu_filter_tabs { display: flex; flex-wrap: wrap; gap: 9px; padding-bottom: 14px; border-bottom: 1px solid #eee4da; }
+.menu_filter_tabs button { border: 1px solid #eadfd4; border-radius: 999px; padding: 10px 17px; background: #fffaf5; color: #38271d; font: inherit; font-size: .92rem; font-weight: 700; transition: background .2s ease, color .2s ease, transform .2s ease; }
+.menu_filter_tabs button:hover { transform: translateY(-1px); border-color: var(--yellow); }
+.menu_filter_tabs button.active { background: var(--bg-coffee); border-color: var(--bg-coffee); color: #fff; }
+.menu_search_sort { display: flex; gap: 12px; align-items: center; padding-top: 14px; }
+.menu_search { display: flex; align-items: center; gap: 11px; flex: 1; min-width: 0; border: 1px solid #eadfd4; border-radius: 10px; padding: 0 14px; min-height: 46px; color: #8a796c; }
+.menu_search input { border: 0; outline: 0; width: 100%; min-width: 0; background: transparent; color: #38271d; font: inherit; font-size: .92rem; }
+.menu_search button { border: 0; background: transparent; font-size: 1.35rem; color: #806e60; }
+.menu_sort { display: flex; align-items: center; gap: 9px; border: 1px solid #eadfd4; border-radius: 10px; padding: 0 12px; min-height: 46px; color: #8a796c; }
+.menu_sort select { border: 0; outline: 0; background: transparent; color: #38271d; font: inherit; font-size: .9rem; max-width: 185px; }
+.menu_no_results { text-align: center; padding: 38px 15px; background: rgba(255,255,255,.06); border: 1px dashed rgba(255,255,255,.25); border-radius: 12px; color: #fff; width: 100%; }
+.menu_no_results > i { font-size: 2rem; color: var(--yellow); }
+.menu_no_results p { color: #d6c9bd; }
+.customize-total { display: flex; justify-content: space-between; align-items: center; padding: 12px 14px; border-radius: 8px; background: #fff6e7; color: #38271d; }
+.customize-total strong { font-size: 1.15rem; }
+@media (max-width: 650px) { .menu_search_sort { align-items: stretch; flex-direction: column; } .menu_sort select { max-width: none; flex: 1; } .menu_filter_tabs button { padding: 9px 12px; font-size: .85rem; } }
+
+.menu_results_count { color: #8a796c; font-size: .86rem; margin: 0 0 10px 2px; }
+.menu_results_count strong { color: #38271d; }

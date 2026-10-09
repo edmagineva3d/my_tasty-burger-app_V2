@@ -12,9 +12,16 @@ import { Link } from "react-router-dom";
 import { useCart } from "../../context/CartContext";
 import type { Product } from "../../types";
 import type { ReactNode } from "react";
+import { useEffect, useMemo, useState } from "react";
 
 function Section3() {
   const { addToCart } = useCart();
+  useEffect(() => { const sync = () => { try { setFavoriteIds(JSON.parse(localStorage.getItem("tastyBurgerFavorites") || "[]")); } catch { setFavoriteIds([]); } }; window.addEventListener("tasty-favorites-updated", sync); return () => window.removeEventListener("tasty-favorites-updated", sync); }, []);
+  const [search, setSearch] = useState("");
+  const [category, setCategory] = useState("all");
+  const [sortBy, setSortBy] = useState("featured");
+  const [favoritesOnly, setFavoritesOnly] = useState(false);
+  const [favoriteIds, setFavoriteIds] = useState<string[]>(() => { try { return JSON.parse(localStorage.getItem("tastyBurgerFavorites") || "[]"); } catch { return []; } });
   // Mock Data Cards
   const mockData: Product[] = [
     {
@@ -84,6 +91,19 @@ function Section3() {
     // Add more mock data objects as needed
   ];
 
+  const visibleProducts = useMemo(() => {
+    const filtered = mockData.filter((product) => {
+      const query = search.trim().toLowerCase();
+      const matchesSearch = !query || `${product.title} ${product.paragraph}`.toLowerCase().includes(query);
+      const isFries = product.title.toLowerCase().includes("fries");
+      const matchesCategory = category === "all" || (category === "fries" ? isFries : category === "burgers" ? !isFries : true);
+      return matchesSearch && matchesCategory && (!favoritesOnly || favoriteIds.includes(product.id));
+    });
+    if (sortBy === "name") filtered.sort((a, b) => a.title.localeCompare(b.title));
+    if (sortBy === "popular" || sortBy === "rating") filtered.sort((a, b) => b.rating - a.rating);
+    return filtered;
+  }, [search, category, sortBy, favoritesOnly, favoriteIds]);
+
   const renderRatingIcons = (rating: number): ReactNode[] => {
     const stars = [];
     for (let i = 0; i < 5; i++) {
@@ -102,29 +122,35 @@ function Section3() {
 
   return (
     <section className="menu_section" id="menu">
+      <div className="menu_tools_wrap"><Container>
+        <div className="menu_tools">
+          <div className="menu_results_count">Showing <strong>{visibleProducts.length}</strong> menu item{visibleProducts.length === 1 ? "" : "s"}</div>
+          <div className="menu_filter_tabs" role="group" aria-label="Menu category">
+            {[{ id: "all", label: "🍔 All items" }, { id: "burgers", label: "🍔 Burgers" }, { id: "fries", label: "🍟 Fries" }].map((item) => <button key={item.id} type="button" className={category === item.id ? "active" : ""} onClick={() => setCategory(item.id)}>{item.label}</button>)}
+            <button type="button" className={favoritesOnly ? "active" : ""} onClick={() => { setFavoriteIds(() => { try { return JSON.parse(localStorage.getItem("tastyBurgerFavorites") || "[]"); } catch { return []; } }); setFavoritesOnly((value) => !value); }}>❤️ Favorites</button>
+          </div>
+          <div className="menu_search_sort">
+            <label className="menu_search"><i className="bi bi-search"></i><input value={search} onChange={(event) => setSearch(event.target.value)} placeholder="Search burgers, fries, or toppings..." aria-label="Search menu" />{search && <button type="button" onClick={() => setSearch("")} aria-label="Clear search">×</button>}</label>
+            <label className="menu_sort"><i className="bi bi-sliders"></i><span className="visually-hidden">Sort menu</span><select value={sortBy} onChange={(event) => setSortBy(event.target.value)}><option value="featured">Featured picks</option><option value="popular">Most popular</option><option value="rating">Top rated</option><option value="name">Name: A to Z</option></select></label>
+          </div>
+        </div>
+      </Container></div>
       <Container>
         <Row>
-          <Col lg={{ span: 8, offset: 2 }} className="text-center mb-5">
-            <h2>OUR CRAZY BURGERS</h2>
-            <p className="para">
-              Juicy, cheesy, and delicious burgers made fresh for every burger lover!
-            </p>
-          </Col>
-        </Row>
-        <Row>
-          {mockData.map((cardData, index) => (
+          {visibleProducts.length ? visibleProducts.map((cardData) => (
             <Cards
-              key={index}
+              key={cardData.id}
               id={cardData.id}
               image={cardData.image}
               rating={cardData.rating}
               title={cardData.title}
               paragraph={cardData.paragraph}
               price={cardData.price}
+              badgeLabel={({ "0001": "FAN FAVORITE", "0002": "BEST SELLER", "0003": "GREAT VALUE", "0004": "PLANT-BASED PICK", "0005": "GREAT VALUE", "0006": "CRISPY FAVORITE", "0007": "POPULAR PICK", "0008": "FUN FAVORITE" } as Record<string, string>)[cardData.id]}
               renderratingIcons={renderRatingIcons}
-              handleAddToCart={() => addToCart(cardData)}
+              handleAddToCart={(product) => addToCart(product)}
             />
-          ))}
+          )) : <Col xs={12}><div className="menu_no_results"><i className="bi bi-search"></i><h4>No tasty matches found</h4><p>Try another search or choose a different menu filter.</p><button type="button" className="btn btn_red" onClick={() => { setSearch(""); setCategory("all"); setFavoritesOnly(false); setSortBy("featured"); }}>Show all items</button></div></Col>}
         </Row>
         <Row className="pt-5">
           <Col sm={6} lg={5}>
