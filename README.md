@@ -145,6 +145,8 @@ npm.cmd install
 npm.cmd run dev
 ```
 
+SAMPLE: https://tasty-burger-app-v2.vercel.app/
+
 Then open the local link shown in the terminal.
 
 ## 📌 Note
