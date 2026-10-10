@@ -1,5 +1,4 @@
 import { Container, Row, Carousel } from "react-bootstrap";
-
 import User1 from "../../assets/blog/review-author-1.jpg";
 import User2 from "../../assets/blog/review-author-2.jpg";
 import User3 from "../../assets/blog/review-author-3.jpg";
@@ -17,9 +16,7 @@ function Section6() {
                   <img src={User1} alt="customer" className="img-fluid" />
                 </div>
                 <p>
-                  "The burger was really delicious and the fries were crispy.
-                  Everything tasted fresh and satisfying. I will definitely
-                  order again!"
+                  "Na para bang, para bang, sabi ko sa sarili ko VEGETARIAN ako pero nung natikman ko 'to, ano nga ulit ako."
                 </p>
                 <div className="item_rating mb-2">
                   <i className="bi bi-star-fill"></i>
@@ -38,9 +35,7 @@ function Section6() {
                   <img src={User2} alt="customer" className="img-fluid" />
                 </div>
                 <p>
-                  "I really enjoyed my meal at Tasty Burger. The burger was
-                  juicy, the cheese was tasty, and the fries were perfectly
-                  crispy."
+                  "PINAKA-MASARAP na BURGER na natikman ko sa buong planet EARTH na inutang ko pambili galing kay MARS."
                 </p>
                 <div className="item_rating mb-2">
                   <i className="bi bi-star-fill"></i>
@@ -59,8 +54,7 @@ function Section6() {
                   <img src={User3} alt="customer" className="img-fluid" />
                 </div>
                 <p>
-                  "Tasty Burger has great food and generous servings. The
-                  combination of a tasty burger and crispy fries was perfect!"
+                  "Ganito pala ang kamandag ng isang Tasty Burger. Mapapa-SMILE ka sa sarap ng bawat kagat."
                 </p>
                 <div className="item_rating mb-2">
                   <i className="bi bi-star-fill"></i>
@@ -79,8 +73,7 @@ function Section6() {
                   <img src={User4} alt="customer" className="img-fluid" />
                 </div>
                 <p>
-                  "A delicious meal at a great price! I loved the burger and
-                  fries, and the service was also friendly. Highly recommended!"
+                  "A delicious meal at a great price! I loved the burger and fries, and the service was also friendly. Kaya Eto napa-nganga nalang ako!"
                 </p>
                 <div className="item_rating mb-2">
                   <i className="bi bi-star-fill"></i>
