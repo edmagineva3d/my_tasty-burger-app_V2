@@ -104,7 +104,7 @@ Open the local URL displayed in the terminal.
 
 ## 🌐 Live Demo
 
-
+https://my-tasty-burger-app-v2.vercel.app/
 
 ## 📌 Note
 
