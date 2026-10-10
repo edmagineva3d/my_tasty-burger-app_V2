@@ -27,11 +27,11 @@
 
 ![Tasty Burger Home and Hero](https://github.com/edmagineva3d/my_tasty-burger-app_V2/blob/main/assets/1.png?raw=true)
 
-### 🍔 About & Menu
+### 📱 Add-ons with Discount
 
 ![About and Menu](https://github.com/edmagineva3d/my_tasty-burger-app_V2/blob/main/assets/2.png?raw=true)
 
-### 🍟 Menu Favorites
+### 🍟 Menu Favorites/Search Bar
 
 ![Menu Favorites](https://github.com/edmagineva3d/my_tasty-burger-app_V2/blob/main/assets/3.png?raw=true)
 
@@ -39,7 +39,7 @@
 
 ![Promotions](https://github.com/edmagineva3d/my_tasty-burger-app_V2/blob/main/assets/4.png?raw=true)
 
-### 📱 Add-ons with Discount
+### 📱 Promotion
 
 ![Add-ons with Discount](https://github.com/edmagineva3d/my_tasty-burger-app_V2/blob/main/assets/5.png?raw=true)
 
