@@ -67,7 +67,7 @@ function Footer() {
             <Col>
               <div>
                 <ul className="list-unstyled text-center mb-0">
-                  <li><Link to="/">© 2023 <span>CODE4EDUCATION</span>. All Rights Reserved</Link></li>
+                  <li><Link to="/">© 2026 <span>BSIT 3D - EDMA</span>. All Rights Reserved</Link></li>
                   <li><Link to="/">About Us </Link></li>
                   <li><Link to="/">Terms Of User </Link></li>
                   <li><Link to="/">Privacy Policy </Link></li>
