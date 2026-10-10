@@ -2,7 +2,7 @@
   <img src="https://readme-typing-svg.demolab.com/?font=Fira+Code&size=24&duration=3000&pause=1000&color=F97316&center=true&vCenter=true&width=600&lines=Welcome+to+Tasty+Burger!;Fresh+Burgers%2C+Easy+Ordering!;Browse+Your+Favorite+Food!;Made+with+React%2C+TypeScript+%26+Vite" alt="Typing SVG" />
 </p>
 
-<h1 align="center">🍔 Tasty Burger</h1>
+<h1 align="center">🍔 Tasty Burger V2</h1>
 
 **Tasty Burger** is a food ordering website made using **React, TypeScript, and Vite**. Users can browse burgers, fries, and drinks, add items to their cart, manage quantities, and place orders.
 
