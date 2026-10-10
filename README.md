@@ -1,19 +1,23 @@
-# 🍔 Tasty Burger
+ <p align="center">
+  <img src="https://readme-typing-svg.demolab.com/?font=Fira+Code&size=24&duration=3000&pause=1000&color=F97316&center=true&vCenter=true&width=600&lines=Welcome+to+Tasty+Burger!;Fresh+Burgers%2C+Easy+Ordering!;Browse+Your+Favorite+Food!;Made+with+React%2C+TypeScript+%26+Vite" alt="Typing SVG" />
+</p>
+
+<h1 align="center">🍔 Tasty Burger</h1>
 
 **Tasty Burger** is a food ordering website made using **React, TypeScript, and Vite**. Users can browse burgers, fries, and drinks, add items to their cart, manage quantities, and place orders.
 
 ## ✨ Features
 
-* 🍔 Browse burgers, fries, and drinks
-* 🛒 Add items to cart
-* ➕➖ Increase or decrease item quantity
-* ❌ Remove items from cart
-* ❤️ Add items to favorites
-* 💰 View prices and order total
-* 📦 Checkout orders
-* ⭐ Customer reviews
-* 🔐 Login and Register modal
-* 📱 Responsive design
+- 🍔 Browse burgers, fries, and drinks
+- 🛒 Add items to cart
+- ➕➖ Increase or decrease item quantity
+- ❌ Remove items from cart
+- ❤️ Add items to favorites
+- 💰 View prices and order total
+- 📦 Checkout orders
+- ⭐ Customer reviews
+- 🔐 Login and Register modal
+- 📱 Responsive design
 
 ## 🖼️ Screenshots
 
@@ -59,12 +63,12 @@
 
 ## 🛠️ Technologies Used
 
-* ⚛️ React
-* 📘 TypeScript
-* ⚡ Vite
-* 🎨 CSS
-* 🛍️ React Context
-* 🧩 Bootstrap Icons
+- ⚛️ React
+- 📘 TypeScript
+- ⚡ Vite
+- 🎨 CSS
+- 🛍️ React Context
+- 🧩 Bootstrap Icons
 
 ## 📂 Project Structure
 
@@ -79,7 +83,7 @@ Tasty-Burger/
 │   ├── assets/
 │   ├── App.tsx
 │   └── main.tsx
-├── assets/ 
+├── assets/
 ├── index.html
 ├── package.json
 └── vite.config.ts
@@ -106,4 +110,6 @@ This project was created for a school activity. It uses sample food data for dem
 
 ---
 
-**Tasty Burger — Fresh Burgers, Easy Ordering!** 🍔🍟🥤
+<p align="center">
+  <b>Tasty Burger — Fresh Burgers, Easy Ordering! 🍔🍟🥤</b>
+</p>
