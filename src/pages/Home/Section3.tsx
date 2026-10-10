@@ -165,7 +165,7 @@ function Section3() {
           <Col sm={6} lg={7}>
             <div className="ads_box ads_img2">
               <h4 className="mb-0">GET YOUR FREE</h4>
-              <h5>CHEESE FRIES</h5>
+              <h5>CHEESEBURGER</h5>
               <Link to={"/"} className="btn btn_red px-4 rounded-0">
                 Learn More
               </Link>
