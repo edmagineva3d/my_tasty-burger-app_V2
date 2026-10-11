@@ -25,7 +25,7 @@ const friesAddOnChoices = [
 ];
 const discountCode = "TASTYBURGER67";
 
-function Cards({ id, image, rating, title, paragraph, price, renderratingIcons, handleAddToCart, badgeLabel }: CardsProps) {
+function Cards({ id, image, rating, title, paragraph, price, soldOut = false, renderratingIcons, handleAddToCart, badgeLabel }: CardsProps) {
   const [showCustomize, setShowCustomize] = useState(false);
   const [selectedAddOns, setSelectedAddOns] = useState<string[]>([]);
   const [coupon, setCoupon] = useState("");
@@ -73,7 +73,7 @@ function Cards({ id, image, rating, title, paragraph, price, renderratingIcons, 
     <>
       <Col sm={6} lg={4} xl={3} className="mb-4">
         <Card className="overflow-hidden">
-          <div className="menu-card-image overflow-hidden"><Card.Img variant="top" src={image} alt={title} />{badgeLabel && <span className="menu-item-badge">{badgeLabel}</span>}</div>
+          <div className={`menu-card-image overflow-hidden ${soldOut ? "sold-out-image" : ""}`}><Card.Img variant="top" src={image} alt={title} />{badgeLabel && <span className="menu-item-badge">{badgeLabel}</span>}{soldOut && <span className="sold-out-badge">SOLD OUT</span>}</div>
           <Card.Body>
             <div className="d-flex align-items-center justify-content-between">
               <div className="item_rating">{renderratingIcons(rating)}</div>
@@ -89,7 +89,7 @@ function Cards({ id, image, rating, title, paragraph, price, renderratingIcons, 
           </Card.Body>
         </Card>
       </Col>
-      <Modal show={showCustomize} onHide={() => setShowCustomize(false)} centered>
+      <Modal show={showCustomize && !soldOut} onHide={() => setShowCustomize(false)} centered>
         <Modal.Header closeButton><Modal.Title>{isFries ? "🍟" : "🍔"} Customize {title}</Modal.Title></Modal.Header>
         <Modal.Body>
           <p className="small text-muted">{isFries ? "Choose your fries toppings. The price updates automatically." : "Choose your add-ons. The price updates automatically."}</p>
