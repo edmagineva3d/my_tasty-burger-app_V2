@@ -157,3 +157,12 @@
 .tracking_demo_note p { margin: 0; color: #725400; font-size: 14px; }
 .tracking_complete { margin-top: 24px; color: #16743b; font-weight: 700; }
 .tracking_links { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; margin-top: 24px; }
+
+@media (max-width: 600px) {
+  .orders_section { padding-top: 90px; }
+  .orders_table_wrap { padding: 8px; }
+  .tracking_steps { gap: 5px; }
+  .tracking_step { font-size: 11px; }
+  .tracking_step_icon { width: 32px; height: 32px; }
+  .tracking_item img { width: 48px; height: 48px; }
+}
