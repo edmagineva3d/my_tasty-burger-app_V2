@@ -45,6 +45,7 @@ function Header() {
               <Nav.Link href="#shop">Shop</Nav.Link>
               <Nav.Link href="#blog">Blog</Nav.Link>
               <Nav.Link href="#contact">Contact</Nav.Link>
+              <Nav.Link as={Link} to="/order-history">Order History</Nav.Link>
               <Nav.Link as={Link} to="/cart">
                 <div className="cart">
                   <i className="bi bi-bag fs-5"></i>
