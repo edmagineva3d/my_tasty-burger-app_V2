@@ -17,6 +17,9 @@
 - ❤️ Add items to favorites
 - 💰 View prices and order total
 - 📦 Checkout orders
+- 🚫 Sold-out labels that prevent unavailable items from being added to cart
+- 🚚 Order tracking with a step-by-step status timeline
+- 🧾 Order history saved in the browser
 - ⭐ Customer reviews
 - 🔐 Login and Register modal
 - 📱 Responsive design
