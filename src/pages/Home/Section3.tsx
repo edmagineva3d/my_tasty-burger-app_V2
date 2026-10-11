@@ -88,6 +88,7 @@ function Section3() {
       paragraph: "Fun-shaped crispy fries with a golden crunch and tasty savory flavor",
       rating: 2.0,
       price: 89.12,
+      soldOut: true,
     },
     // Add more mock data objects as needed
   ];
@@ -147,6 +148,7 @@ function Section3() {
               title={cardData.title}
               paragraph={cardData.paragraph}
               price={cardData.price}
+              soldOut={cardData.soldOut}
               badgeLabel={({ "0001": "FAN FAVORITE", "0002": "BEST SELLER", "0003": "GREAT VALUE", "0004": "PLANT-BASED PICK", "0005": "GREAT VALUE", "0006": "CRISPY FAVORITE", "0007": "POPULAR PICK", "0008": "FUN FAVORITE" } as Record<string, string>)[cardData.id]}
               renderratingIcons={renderRatingIcons}
               handleAddToCart={(product) => addToCart(product)}
