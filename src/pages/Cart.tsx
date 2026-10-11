@@ -113,10 +113,9 @@ function Cart() {
             <i className="bi bi-check-circle-fill text-success" style={{ fontSize: "4rem" }}></i>
           </div>
           <h3>Order Placed Successfully!</h3>
-          <p>Thank you for choosing Tasty Burger. Your delicious meal is on its way!</p>
-          <Button variant="danger" className="mt-3 px-4" onClick={() => navigate("/")}>
-            Back to Home
-          </Button>
+          <p>Thank you for choosing Tasty Burger. You can follow your order status anytime.</p>
+          <Button variant="warning" className="mt-3 px-4 me-2" onClick={() => navigate("/order-history")}>Order History</Button>
+          <Button variant="danger" className="mt-3 px-4" onClick={() => navigate("/")}>Back to Home</Button>
         </Modal.Body>
       </Modal>
     </section>
