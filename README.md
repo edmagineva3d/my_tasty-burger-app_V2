@@ -30,7 +30,7 @@
 
 ![Tasty Burger Home and Hero](https://github.com/edmagineva3d/my_tasty-burger-app_V2/blob/main/assets/1.png?raw=true)
 
-### 🍔 Burger Menu/🚫 Sold Out Items
+### 🍔 Burger Menu + 🚫 Sold Out Items
 
 ![Add-ons with Discount](https://github.com/edmagineva3d/my_tasty-burger-app_V2/blob/main/assets/2.png?raw=true)
 
@@ -70,7 +70,7 @@
 
 ![Sold Out Items](https://github.com/edmagineva3d/my_tasty-burger-app_V2/blob/main/assets/11.png?raw=true)
 
-### 🍟 Fries Menu
+### 🍟 Fries Menu + 🚫 Sold Out Items
 
 ![Order Tracking and Order History](https://github.com/edmagineva3d/my_tasty-burger-app_V2/blob/main/assets/12.png?raw=true)
 
