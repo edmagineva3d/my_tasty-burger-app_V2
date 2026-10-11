@@ -1,4 +1,4 @@
- <p align="center">
+<p align="center">
   <img src="https://readme-typing-svg.demolab.com/?font=Fira+Code&size=24&duration=3000&pause=1000&color=F97316&center=true&vCenter=true&width=600&lines=Welcome+to+Tasty+Burger!;Fresh+Burgers%2C+Easy+Ordering!;Browse+Your+Favorite+Food!;Made+with+React%2C+TypeScript+%26+Vite" alt="Typing SVG" />
 </p>
 
@@ -32,19 +32,19 @@
 
 ### 📱 Add-ons with Discount
 
-![About and Menu](https://github.com/edmagineva3d/my_tasty-burger-app_V2/blob/main/assets/2.png?raw=true)
+![Add-ons with Discount](https://github.com/edmagineva3d/my_tasty-burger-app_V2/blob/main/assets/2.png?raw=true)
 
-### 🍟 Menu Favorites/Search Bar
+### 🍟 Menu Favorites and Search Bar
 
-![Menu Favorites](https://github.com/edmagineva3d/my_tasty-burger-app_V2/blob/main/assets/3.png?raw=true)
+![Menu Favorites and Search Bar](https://github.com/edmagineva3d/my_tasty-burger-app_V2/blob/main/assets/3.png?raw=true)
 
 ### 🎁 Promotions
 
 ![Promotions](https://github.com/edmagineva3d/my_tasty-burger-app_V2/blob/main/assets/4.png?raw=true)
 
-### 📱 Promotion
+### 🏷️ Promotion Details
 
-![Add-ons with Discount](https://github.com/edmagineva3d/my_tasty-burger-app_V2/blob/main/assets/5.png?raw=true)
+![Promotion Details](https://github.com/edmagineva3d/my_tasty-burger-app_V2/blob/main/assets/5.png?raw=true)
 
 ### ⭐ Customer Reviews
 
@@ -65,6 +65,14 @@
 ### 🍟 Fries Menu
 
 ![Fries Menu](https://github.com/edmagineva3d/my_tasty-burger-app_V2/blob/main/assets/10.png?raw=true)
+
+### 🚫 Sold Out Items
+
+![Sold Out Items](https://github.com/edmagineva3d/my_tasty-burger-app_V2/blob/main/assets/11.png?raw=true)
+
+### 🚚 Order Tracking and Order History
+
+![Order Tracking and Order History](https://github.com/edmagineva3d/my_tasty-burger-app_V2/blob/main/assets/12.png?raw=true)
 
 ## 🛠️ Technologies Used
 
@@ -89,6 +97,18 @@ Tasty-Burger/
 │   ├── App.tsx
 │   └── main.tsx
 ├── assets/
+│   ├── 1.png
+│   ├── 2.png
+│   ├── 3.png
+│   ├── 4.png
+│   ├── 5.png
+│   ├── 6.png
+│   ├── 7.png
+│   ├── 8.png
+│   ├── 9.png
+│   ├── 10.png
+│   ├── 11.png
+│   └── 12.png
 ├── index.html
 ├── package.json
 └── vite.config.ts
@@ -103,15 +123,15 @@ npm.cmd install
 npm.cmd run dev
 ```
 
-Open the local URL displayed in the terminal.
+Open the local URL displayed in the terminal, usually `http://localhost:5173`.
 
 ## 🌐 Live Demo
 
-https://my-tasty-burger-app-v2.vercel.app/
+[Visit Tasty Burger V2](https://my-tasty-burger-app-v2.vercel.app/)
 
 ## 📌 Note
 
-This project was created for a school activity. It uses sample food data for demonstration purposes. Order history and tracking are saved in the current browser using localStorage; tracking status updates are demo controls, not live delivery updates.
+This project was created for a school activity. It uses sample food data for demonstration purposes. Order history and tracking are saved in the current browser using `localStorage`; tracking status updates are demo controls, not live delivery updates.
 
 ---
 
