@@ -55,6 +55,7 @@ function Section3() {
       paragraph: "House patty, cheddar cheese, bacon, onion, mustard",
       rating: 3.5,
       price: 99.25,
+      soldOut: true,
     },
     {
       id: "0005",
