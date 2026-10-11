@@ -39,7 +39,7 @@ function OrderTracking() {
           <div className="tracking_card">
             <div className="tracking_order_top">
               <div><span className="tracking_label">ORDER NUMBER</span><h3>{order.id}</h3></div>
-              <span className={`order_status status_${order.status.toLowerCase().replaceAll(" ", "-")}`}>{order.status}</span>
+              <span className={`order_status status_${order.status.toLowerCase().replace(/ /g, "-")}`}>{order.status}</span>
             </div>
             <p className="tracking_date">Placed on {new Date(order.createdAt).toLocaleString()}</p>
             <div className="tracking_steps">

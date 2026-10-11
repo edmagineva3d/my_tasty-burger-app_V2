@@ -111,7 +111,7 @@ https://my-tasty-burger-app-v2.vercel.app/
 
 ## 📌 Note
 
-This project was created for a school activity. It uses sample food data for demonstration purposes.
+This project was created for a school activity. It uses sample food data for demonstration purposes. Order history and tracking are saved in the current browser using localStorage; tracking status updates are demo controls, not live delivery updates.
 
 ---
 

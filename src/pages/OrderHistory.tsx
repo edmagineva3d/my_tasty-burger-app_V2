@@ -25,7 +25,7 @@ function OrderHistory() {
                     <td>{new Date(order.createdAt).toLocaleString()}</td>
                     <td>{order.items.reduce((sum, item) => sum + item.quantity, 0)} item(s)</td>
                     <td>₱{order.total.toFixed(2)}</td>
-                    <td><span className={`order_status status_${order.status.toLowerCase().replaceAll(" ", "-")}`}>{order.status}</span></td>
+                    <td><span className={`order_status status_${order.status.toLowerCase().replace(/ /g, "-")}`}>{order.status}</span></td>
                     <td><Button as={Link} to={`/track/${order.id}`} size="sm" variant="warning">Track Order</Button></td>
                   </tr>
                 ))}
