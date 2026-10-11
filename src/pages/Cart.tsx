@@ -4,6 +4,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { useCart } from "../context/CartContext";
 import "../styles/cart.css";
 import BurgerIcon from "../assets/menu/burger-11.jpg";
+import { saveOrder } from "../utils/orders";
 
 function Cart() {
   const { cartItems, removeFromCart, updateQuantity, clearCart } = useCart();
@@ -18,10 +19,19 @@ function Cart() {
   const total = subtotal + delivery;
 
   const handleCheckout = () => {
+    if (cartItems.length === 0) return;
+    const orderId = `TB-${Date.now().toString().slice(-8)}`;
+    saveOrder({
+      id: orderId,
+      items: cartItems.map((item) => ({ ...item })),
+      subtotal,
+      delivery,
+      total,
+      status: "Order Received",
+      createdAt: new Date().toISOString(),
+    });
     setShowModal(true);
-    window.setTimeout(() => {
-      clearCart();
-    }, 2000);
+    clearCart();
   };
 
   return (
