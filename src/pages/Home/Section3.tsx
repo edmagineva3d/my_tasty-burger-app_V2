@@ -14,8 +14,9 @@ import type { Product } from "../../types";
 import type { ReactNode } from "react";
 import { useEffect, useMemo, useState } from "react";
 import {
+  Utensils,
   Hamburger,
-  CookingPot,
+  FaceSlightlySmiling,
   Heart,
   Search,
   SlidersHorizontal,
@@ -138,9 +139,9 @@ function Section3() {
           
 <div className="menu_filter_tabs" role="group" aria-label="Menu category">
   {[
-    { id: "all", label: "All items", Icon: Hamburger },
-    { id: "burgers", label: "Burgers", Icon: CookingPot },
-    { id: "fries", label: "Fries", Icon: Hamburger },
+    { id: "all", label: "All items", Icon: Utensils },
+    { id: "burgers", label: "Burgers", Icon: Hamburger },
+    { id: "fries", label: "Fries", Icon: FaceSlightlySmiling },
   ].map(({ id, label, Icon }) => (
     <button
       key={id}
