@@ -13,6 +13,14 @@ import { useCart } from "../../context/CartContext";
 import type { Product } from "../../types";
 import type { ReactNode } from "react";
 import { useEffect, useMemo, useState } from "react";
+import {
+  Hamburger,
+  CookingPot,
+  Heart,
+  Search,
+  SlidersHorizontal,
+  X,
+} from "lucide-react";
 
 function Section3() {
   const { addToCart } = useCart();
