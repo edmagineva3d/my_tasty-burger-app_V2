@@ -3,7 +3,7 @@ import { Container, Row, Col, Table, Modal, Button } from "react-bootstrap";
 import { Link, useNavigate } from "react-router-dom";
 import { useCart } from "../context/CartContext";
 import "../styles/cart.css";
-import BurgerIcon from "../assets/menu/burger-11.jpg";
+import BurgerIcon from "../assets/menu/cart-empty.jpg";
 import { saveOrder } from "../utils/orders";
 
 function Cart() {
