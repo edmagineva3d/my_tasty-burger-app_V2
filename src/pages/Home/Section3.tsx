@@ -135,14 +135,44 @@ function Section3() {
       <div className="menu_tools_wrap"><Container>
         <div className="menu_tools">
           <div className="menu_results_count">Showing <strong>{visibleProducts.length}</strong> menu item{visibleProducts.length === 1 ? "" : "s"}</div>
-          <div className="menu_filter_tabs" role="group" aria-label="Menu category">
-            {[{ id: "all", label: "🍔 All items" }, { id: "burgers", label: "🍔 Burgers" }, { id: "fries", label: "🍟 Fries" }].map((item) => <button key={item.id} type="button" className={category === item.id ? "active" : ""} onClick={() => setCategory(item.id)}>{item.label}</button>)}
-            <button type="button" className={favoritesOnly ? "active" : ""} onClick={() => { setFavoriteIds(() => { try { return JSON.parse(localStorage.getItem("tastyBurgerFavorites") || "[]"); } catch { return []; } }); setFavoritesOnly((value) => !value); }}>❤️ Favorites</button>
-          </div>
-          <div className="menu_search_sort">
-            <label className="menu_search"><i className="bi bi-search"></i><input value={search} onChange={(event) => setSearch(event.target.value)} placeholder="Search burgers, fries, or toppings..." aria-label="Search menu" />{search && <button type="button" onClick={() => setSearch("")} aria-label="Clear search">×</button>}</label>
-            <label className="menu_sort"><i className="bi bi-sliders"></i><span className="visually-hidden">Sort menu</span><select value={sortBy} onChange={(event) => setSortBy(event.target.value)}><option value="featured">Featured picks</option><option value="popular">Most popular</option><option value="rating">Top rated</option><option value="name">Name: A to Z</option></select></label>
-          </div>
+          
+<div className="menu_filter_tabs" role="group" aria-label="Menu category">
+  {[
+    { id: "all", label: "All items", Icon: Hamburger },
+    { id: "burgers", label: "Burgers", Icon: CookingPot },
+    { id: "fries", label: "Fries", Icon: Hamburger },
+  ].map(({ id, label, Icon }) => (
+    <button
+      key={id}
+      type="button"
+      className={category === id ? "active" : ""}
+      onClick={() => setCategory(id)}
+    >
+      <Icon size={17} strokeWidth={2} />
+      <span>{label}</span>
+    </button>
+  ))}
+
+  <button
+    type="button"
+    className={favoritesOnly ? "active" : ""}
+    onClick={() => {
+      setFavoriteIds(() => {
+        try {
+          return JSON.parse(
+            localStorage.getItem("tastyBurgerFavorites") || "[]"
+          );
+        } catch {
+          return [];
+        }
+      });
+      setFavoritesOnly((value) => !value);
+    }}
+  >
+    <Heart size={17} strokeWidth={2} />
+    <span>Favorites</span>
+  </button>
+</div>
         </div>
       </Container></div>
       <Container>
