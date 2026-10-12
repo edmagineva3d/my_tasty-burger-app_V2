@@ -174,8 +174,47 @@ function Section3() {
     <span>Favorites</span>
   </button>
 </div>
+
+ <div className="menu_search_sort">
+            <label className="menu_search">
+              <Search size={18} />
+              <input
+                value={search}
+                onChange={(event) => setSearch(event.target.value)}
+                placeholder="Search burgers, fries, or toppings..."
+                aria-label="Search menu"
+              />
+
+              {search && (
+                <button
+                  type="button"
+                  onClick={() => setSearch("")}
+                  aria-label="Clear search"
+                >
+                  <X size={17} />
+                </button>
+              )}
+            </label>
+
+            <label className="menu_sort">
+              <SlidersHorizontal size={18} />
+              <span className="visually-hidden">Sort menu</span>
+              <select
+                value={sortBy}
+                onChange={(event) => setSortBy(event.target.value)}
+              >
+                <option value="featured">Featured picks</option>
+                <option value="popular">Most popular</option>
+                <option value="rating">Top rated</option>
+                <option value="name">Name: A to Z</option>
+              </select>
+            </label>
+          </div>
         </div>
-      </Container></div>
+      </Container>
+    </div>
+
+    
       <Container>
         <Row>
           {visibleProducts.length ? visibleProducts.map((cardData) => (
