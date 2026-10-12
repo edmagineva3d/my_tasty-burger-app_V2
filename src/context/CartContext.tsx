@@ -2,15 +2,20 @@ import {
   createContext,
   useContext,
   useState,
+  useEffect,
   type ReactNode,
 } from "react";
 import type { CartItem, Product } from "../types";
 
+const CART_STORAGE_KEY = "tastyBurgerCart";
+
 interface CartContextValue {
   cartItems: CartItem[];
-  addToCart: (product: Product) => void;
+  addToCart: (product: Product | CartItem, qty?: number) => void;
   removeFromCart: (id: string) => void;
   updateQuantity: (id: string, amount: number) => void;
+  updateSpecialInstructions: (id: string, instructions: string) => void;
+  updateCartItem: (id: string, updates: Partial<CartItem>) => void;
   clearCart: () => void;
 }
 
@@ -21,21 +26,42 @@ interface CartProviderProps {
 }
 
 export const CartProvider = ({ children }: CartProviderProps) => {
-  const [cartItems, setCartItems] = useState<CartItem[]>([]);
+  const [cartItems, setCartItems] = useState<CartItem[]>(() => {
+    try {
+      const saved = localStorage.getItem(CART_STORAGE_KEY);
+      return saved ? (JSON.parse(saved) as CartItem[]) : [];
+    } catch {
+      return [];
+    }
+  });
 
-  const addToCart = (product: Product) => {
+  useEffect(() => {
+    try {
+      localStorage.setItem(CART_STORAGE_KEY, JSON.stringify(cartItems));
+    } catch {
+      // ignore storage errors
+    }
+  }, [cartItems]);
+
+  const addToCart = (product: Product | CartItem, qty = 1) => {
+    const addQuantity = Math.max(1, qty || product.quantity || 1);
     setCartItems((currentItems) => {
-      const existingItem = currentItems.find((item) => item.id === product.id);
+      const existingIndex = currentItems.findIndex((item) => item.id === product.id);
 
-      if (existingItem) {
-        return currentItems.map((item) =>
-          item.id === product.id
-            ? { ...item, quantity: item.quantity + 1 }
+      if (existingIndex > -1) {
+        return currentItems.map((item, index) =>
+          index === existingIndex
+            ? { ...item, quantity: item.quantity + addQuantity }
             : item
         );
       }
 
-      return [...currentItems, { ...product, quantity: 1 }];
+      const newItem: CartItem = {
+        ...product,
+        quantity: addQuantity,
+      };
+
+      return [...currentItems, newItem];
     });
   };
 
@@ -55,11 +81,35 @@ export const CartProvider = ({ children }: CartProviderProps) => {
     );
   };
 
+  const updateSpecialInstructions = (id: string, instructions: string) => {
+    setCartItems((currentItems) =>
+      currentItems.map((item) =>
+        item.id === id ? { ...item, specialInstructions: instructions } : item
+      )
+    );
+  };
+
+  const updateCartItem = (id: string, updates: Partial<CartItem>) => {
+    setCartItems((currentItems) =>
+      currentItems.map((item) =>
+        item.id === id ? { ...item, ...updates } : item
+      )
+    );
+  };
+
   const clearCart = () => setCartItems([]);
 
   return (
     <CartContext.Provider
-      value={{ cartItems, addToCart, removeFromCart, updateQuantity, clearCart }}
+      value={{
+        cartItems,
+        addToCart,
+        removeFromCart,
+        updateQuantity,
+        updateSpecialInstructions,
+        updateCartItem,
+        clearCart,
+      }}
     >
       {children}
     </CartContext.Provider>
