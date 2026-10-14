@@ -130,6 +130,7 @@ Browse family meal bundles, burger-and-fries combinations, and featured meal dea
 - 🛍️ React Context
 - 🧩 Bootstrap Icons
 - 💾 Browser localStorage
+- 🖼️ Lucide React Icons
 
 ## 📂 Project Structure
 
